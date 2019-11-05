@@ -1,27 +1,50 @@
 <template>
   <div class="about">
-   <b> DEVELOPERS</b><br>
-    <jessa/><br>
-    <ivy/><br>
-    <gen/>
+    <br />
+    <center>
+      <h1>
+        <b>DEVELOPERS</b>
+      </h1>
+    </center>
+    <br />
+    <devprofile
+      v-bind:image="require('@/assets/images/grace.jpg')"
+      v-bind:name="'Mary Grace Tiburillo'"
+      v-bind:position="'Software Developer and Project Manager'"
+    ></devprofile>
+    <devprofile
+      v-bind:image="require('@/assets/images/gen.jpg')"
+      v-bind:name="'Geneva Rivas'"
+      v-bind:position="'Back-End Developer'"
+    ></devprofile>
+    <devprofile
+      v-bind:image="require('@/assets/images/jessa.jpg')"
+      v-bind:name="'Jessa Jalandoni'"
+      v-bind:position="'Front-End Developer'"
+    ></devprofile>
+    <devprofile
+      v-bind:image="require('@/assets/images/ivy.jpg')"
+      v-bind:name="'Ivy Joy Devilleres'"
+      v-bind:position="'Back-End Developer'"
+    ></devprofile>
   </div>
 </template>
 
 <script>
-import jessa from "../components/Jessa";
-import ivy from "../components/Ivy";
-import gen from "../components/Gen";
-
+import devprofile from "../components/DevelopersProfile";
 
 export default {
-  name: "About",
   components: {
-    jessa,
-    ivy,
-    gen
+    devprofile
   }
 };
 </script>
 <style scoped>
-  .about{}
+.about {
+  /* background-color: pink; */
+  background-image: url("../assets/images/dental.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
 </style>
